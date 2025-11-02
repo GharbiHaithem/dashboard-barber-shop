@@ -18,7 +18,7 @@ const Dashboard = () => {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    socketRef.current = io("http://localhost:5500", { transports: ["websocket"] });
+    socketRef.current = io("https://yahia-barber-shop-server.onrender.com", { transports: ["websocket"] });
     fetchReservations();
 
     socketRef.current.on("connect", () => {
@@ -54,7 +54,7 @@ const Dashboard = () => {
 
   const fetchReservations = async () => {
     try {
-      const res = await axios.get("http://localhost:5500/api/reservations");
+      const res = await axios.get("https://yahia-barber-shop-server.onrender.com/api/reservations");
       setData(res.data);
       const initialNotifs = res.data.map((r) => ({
         id: r._id,
