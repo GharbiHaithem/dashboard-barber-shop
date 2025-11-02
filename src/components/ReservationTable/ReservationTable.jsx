@@ -3,13 +3,13 @@ import { Table, Tag, ConfigProvider } from "antd";
 import axios from "axios";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5500"); // serveur backend
+const socket = io("https://yahia-barber-shop-server.onrender.com"); // serveur backend
 
 const ReservationTable = () => {
   const [data, setData] = useState([]);
 
   const fetchReservations = async () => {
-    const res = await axios.get("http://localhost:5500/api/reservations");
+    const res = await axios.get("https://yahia-barber-shop-server.onrender.com/api/reservations");
     setData(res.data);
   };
 
