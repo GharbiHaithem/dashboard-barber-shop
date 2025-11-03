@@ -92,7 +92,7 @@ const Dashboard = () => {
       />
 
       <main className="flex-1 p-4 lg:p-6 overflow-y-auto">
-        <div className="relative h-[calc(100vh-5rem)] mt-[150px]">
+        <div className="relative h-[calc(100vh-5rem)] mt-[80px]">
           <div className="absolute inset-0 bg-[#111] border border-[#2c2c2c] rounded-xl shadow-lg p-4 overflow-y-auto">
             <ReservationTable data={data} />
           </div>

@@ -100,7 +100,7 @@ const ReservationTable = () => {
             className: "custom-pagination",
           }}
           rowKey="_id"
-          className="rounded-lg overflow-hidden"
+          className="rounded-lg overflow-y-scroll "
         />
       </div>
     </ConfigProvider>
