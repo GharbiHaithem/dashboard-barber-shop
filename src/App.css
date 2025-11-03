@@ -26,3 +26,6 @@
   scrollbar-width: thin;
   scrollbar-color: #efd10ba7 #0f0f0f;
 }
+.ant-empty-description {
+      color: rgba(192, 187, 187, 0.773);
+}
