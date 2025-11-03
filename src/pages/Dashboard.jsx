@@ -59,6 +59,7 @@ const Dashboard = () => {
       const initialNotifs = res.data.map((r) => ({
         id: r._id,
         text: `Réservation de ${r.fullname} à ${r.time} (${r.date})`,
+        createdAt:r.createdAt
       }));
       setNotifications(initialNotifs);
     } catch (err) {
@@ -106,7 +107,7 @@ const Dashboard = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 200 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-20 right-0 w-80 h-[max-content] bg-[#111] border-l border-[#2c2c2c] shadow-xl p-4 z-40"
+            className="fixed top-20 right-10 w-80 h-[700px] overflow-x-scroll bg-[#111] border-l border-[#2c2c2c] shadow-xl p-4 z-40"
           >
             <NotificationPanel notifications={notifications} />
           </motion.div>

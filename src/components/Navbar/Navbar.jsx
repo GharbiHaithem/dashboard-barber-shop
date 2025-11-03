@@ -4,8 +4,8 @@ import i from "../../assets/barber-shop-logo-removebg-preview.png";
 
 const Navbar = ({ onToggleNotif }) => {
   return (
-    <div className="fixed top-0 left-0 w-full z-50 h-[80px] py-2 bg-[#111] flex items-center justify-between px-6 border-b border-[#2c2c2c] shadow-lg">
-      <div className="flex items-center gap-3">
+    <div className="fixed top-0 left-0 w-full z-50 h-[80px]  py-2 bg-[#111] flex items-center justify-between px-6 border-b border-[#2c2c2c] shadow-lg">
+      <div className="flex items-center md:ml-20 gap-3">
         <img
           src={i}
           alt="logo"
@@ -16,7 +16,7 @@ const Navbar = ({ onToggleNotif }) => {
 
       <button
         onClick={onToggleNotif}
-        className="text-[#D4AF37] hover:text-yellow-400 transition"
+        className="text-[#D4AF37] md:mr-20 hover:text-yellow-400 transition"
       >
         <Bell size={28} />
       </button>
